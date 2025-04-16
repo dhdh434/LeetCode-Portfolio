@@ -4,9 +4,9 @@ Explaination and steps of code:
 2) create the get function. Check if the key belongs in the dictionary, if so, delete it and add it back to the list the list so that it starts at the beginning of the list and wont expire as soon.  
 3) create the put function. If the key already is in the cache dictionary, then delete the item. Check if the cache is full, if so then pop off the oldest item. Then add the new key.
 
-Time Efficiency: O(1) because I am using hash tables which have O(1) lookup efficency
+Time Efficiency: O(1) because I am using hash tables which have O(1) lookup efficency.  
 
-Problem Explanation:
+Problem Explanation:  
 Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.
 
 Implement the LRUCache class:
