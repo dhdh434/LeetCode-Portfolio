@@ -1,18 +1,25 @@
-# LeetCode 146 LRU Cache
+# LeetCode 12 Integer to Roman
 ## Explanation and steps of code  
-1) create the constructor  
-2) create the get function. Check if the key belongs in the dictionary, if so, delete it and add it back to the list the list so that it starts at the beginning of the list and wont expire as soon.  
-3) create the put function. If the key already is in the cache dictionary, then delete the item. Check if the cache is full, if so then pop off the oldest item. Then add the new key.
+1) Find out the number of each letter that is needed and use if statements to check the edge cases
+2) Subtract the decimal equivilant each time a roman letter is added
 
 ## Time Efficiency  
-O(1) because I am using hash tables which have O(1) lookup efficiency.  
+O(1) because it is based on the number of digits. In this problem the digits wont be more than 4.  
 
 ## Problem Explanation  
-Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.
+Seven different symbols represent Roman numerals with the following values:
 
-Implement the LRUCache class
+Symbol	Value
+I	1
+V	5
+X	10
+L	50
+C	100
+D	500
+M	1000
+Roman numerals are formed by appending the conversions of decimal place values from highest to lowest. Converting a decimal place value into a Roman numeral has the following rules:
 
-LRUCache(int capacity) Initialize the LRU cache with positive size capacity.
-int get(int key) Return the value of the key if the key exists, otherwise return -1.
-void put(int key, int value) Update the value of the key if the key exists. Otherwise, add the key-value pair to the cache. If the number of keys exceeds the capacity from this operation, evict the least recently used key.
-The functions get and put must each run in O(1) average time complexity.
+If the value does not start with 4 or 9, select the symbol of the maximal value that can be subtracted from the input, append that symbol to the result, subtract its value, and convert the remainder to a Roman numeral.
+If the value starts with 4 or 9 use the subtractive form representing one symbol subtracted from the following symbol, for example, 4 is 1 (I) less than 5 (V): IV and 9 is 1 (I) less than 10 (X): IX. Only the following subtractive forms are used: 4 (IV), 9 (IX), 40 (XL), 90 (XC), 400 (CD) and 900 (CM).
+Only powers of 10 (I, X, C, M) can be appended consecutively at most 3 times to represent multiples of 10. You cannot append 5 (V), 50 (L), or 500 (D) multiple times. If you need to append a symbol 4 times use the subtractive form.
+Given an integer, convert it to a Roman numeral.
