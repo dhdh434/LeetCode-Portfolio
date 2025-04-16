@@ -1,4 +1,3 @@
-
 # LeetCode 146 LRU Cache
 ## Explanation and steps of code  
 1) create the constructor  
