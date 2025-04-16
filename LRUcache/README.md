@@ -1,5 +1,5 @@
 # LeetCode 146 LRU Cache
-Explaination and steps of code:  
+## Explaination and steps of code:  
 1) create the constructor  
 2) create the get function. Check if the key belongs in the dictionary, if so, delete it and add it back to the list the list so that it starts at the beginning of the list and wont expire as soon.  
 3) create the put function. If the key already is in the cache dictionary, then delete the item. Check if the cache is full, if so then pop off the oldest item. Then add the new key.
